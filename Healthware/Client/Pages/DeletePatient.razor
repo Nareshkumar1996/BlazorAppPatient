@@ -1,0 +1,51 @@
+﻿@page "/deletePatient/{id:int}"
+@using Healthware.Shared
+
+@inject NavigationManager NavigationManager
+@inject HttpClient Http
+
+<h2>Delete Patient</h2>
+<p>Are you sure you want to delete this Patient with Id :<b>@id</b></p>
+<hr />
+<div class="col-md-4">
+    <table>
+        <tr>
+            <td>Name</td>
+            <td>@patient.PatientName</td>
+        </tr>
+        <tr>
+            <td>Speciality</td>
+            <td>@patient.Speciality</td>
+        </tr>
+        <tr>
+            <td>Location</td>
+            <td>@patient.Location</td>
+        </tr>
+    </table>
+    <div class="form-group">
+        <input type="button" class="btn btn-primary" @onclick="@Delete" value="Delete" />
+        <input type="button" class="btn" @onclick="@Cancel" value="Cancel" />
+    </div>
+</div>
+
+@code {
+
+    [Parameter]
+    public int id { get; set; }
+
+    Patient patient = new Patient();
+    protected override async Task OnInitializedAsync()
+    {
+        patient = await Http.GetFromJsonAsync<Patient>("/api/Patient/" + id);
+    }
+    protected async Task Delete()
+    {
+        var uri = "/api/Patient/" + id;
+        await Http.DeleteAsync(uri);
+        NavigationManager.NavigateTo("patientList");
+    }
+    private void Cancel()
+    {
+        NavigationManager.NavigateTo("patientList");
+    }
+}

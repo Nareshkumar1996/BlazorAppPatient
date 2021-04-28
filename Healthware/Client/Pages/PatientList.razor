@@ -1,0 +1,56 @@
+﻿@page "/patientList"
+@using Healthware.Shared
+@using System.Net.Http.Headers
+@using Healthware.Client.Extensions
+
+@inject NavigationManager NavigationManager
+@inject HttpClient Http
+
+<h2>Patient Details</h2>
+<p>
+    <a href="/addPatient">Create New Patient</a>
+</p>
+@if (patientList == null)
+{
+    <p>Loading...</p>
+}
+else
+{
+    <table class="table">
+        <thead>
+        <tr>
+            <th>Name</th>
+            <th>Speciality</th>
+            <th>Location</th>
+        </tr>
+        </thead>
+        <tbody>
+        @foreach (var emp in patientList)
+        {
+            <tr>
+                <td>@emp.PatientName</td>
+                <td>@emp.Speciality</td>
+                <td>@emp.Location</td>
+                <td>
+                    <a href='editPatient/@emp.PatientId'>Edit</a>
+                    <a href='deletePatient/@emp.PatientId'>Delete</a>
+                </td>
+            </tr>
+        }
+        </tbody>
+    </table>
+}
+
+@code
+{
+    Patient[] patientList;
+    protected override async Task OnInitializedAsync()
+    {
+        await LoadData();
+    }
+
+    protected async Task LoadData()
+    {
+        patientList = await Http.GetJsonAsync<Patient[]>("/api/Patient", new AuthenticationHeaderValue("Bearer", "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJuYXJlc2gua0B6dWNpc3lzdGVtcy5jb20iLCJlbWFpbCI6Im5hcmVzaC5rQHp1Y2lzeXN0ZW1zLmNvbSIsImp0aSI6ImI5N2Y1NTExLTg2MGYtNDMxNS1iYjdlLWI2MzhlZjU4MTdiNyIsImV4cCI6MTYxOTU5NzEzMSwiaXNzIjoibG9jYWxob3N0IiwiYXVkIjoibG9jYWxob3N0In0.8hRqDJvNvN78k1NTN0p-lk72dYvX42vRBr0vI5nUy14"));
+    }
+}

@@ -1,0 +1,50 @@
+﻿@page "/addPatient"
+@using Healthware.Shared
+
+@inject NavigationManager NavigationManager
+@inject HttpClient Http
+
+<h2>Create Patient</h2>
+<hr/>
+<form>
+    <div class="row">
+        <div class="col-md-8">
+            <div class="form-group">
+                <label for="PatientName" class="control-label">Patient Name</label>
+                <input for="PatientName" class="form-control" @bind="@patient.PatientName" />
+            </div>
+            <div class="form-group">
+                <label for="Desgination" class="control-label">Speciality</label>
+                <input for="Desgination" class="form-control" @bind="@patient.Speciality" />
+            </div>
+            <div class="form-group">
+                <label for="Location" class="control-label">Location</label>
+                <input for="Location" class="form-control" @bind="@patient.Location" />
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-4">
+            <div class="form-group">
+                <input type="button" class="btn btn-primary" @onclick="@CreatePatient" value="Save"/>
+                <input type="button" class="btn" @onclick="@Cancel" value="Cancel"/>
+            </div>
+        </div>
+    </div>
+</form>
+
+@code
+{
+    Patient patient = new Patient();
+
+    protected async Task CreatePatient()
+    {
+        await Http.PostAsJsonAsync("/api/Patient", patient);
+        NavigationManager.NavigateTo("patientList");
+    }
+
+    private void Cancel()
+    {
+        NavigationManager.NavigateTo("patientList");
+    }
+}

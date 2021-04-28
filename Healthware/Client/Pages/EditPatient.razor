@@ -1,0 +1,55 @@
+﻿@page "/editPatient/{id:int}"
+@using Healthware.Shared
+
+@inject NavigationManager NavigationManager
+@inject HttpClient Http
+
+<h2>Edit Patient</h2>
+<hr />
+<form>
+    <div class="row">
+        <div class="col-md-8">
+            <div class="form-group">
+                <label for="PatientName" class="control-label">Patient Name</label>
+                <input for="PatientName" class="form-control" @bind="@emp.PatientName" />
+            </div>
+            <div class="form-group">
+                <label for="Desgination" class="control-label">Speciality</label>
+                <input for="Desgination" class="form-control" @bind="@emp.Speciality" />
+            </div>
+            <div class="form-group">
+                <label for="Location" class="control-label">Location</label>
+                <input for="Location" class="form-control" @bind="@emp.Location" />
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-4">
+            <div class="form-group">
+                <input type="button" class="btn btn-primary" @onclick="@UpdatePatient" value="Save" />
+                <input type="button" class="btn" @onclick="@Cancel" value="Cancel" />
+            </div>
+        </div>
+    </div>
+</form>
+
+@code {
+
+    [Parameter]
+    public int id { get; set; }
+
+    Patient emp = new Patient();
+    protected override async Task OnInitializedAsync()
+    {
+        emp = await Http.GetFromJsonAsync<Patient>("/api/Patient/" + id);
+    }
+    protected async Task UpdatePatient()
+    {
+        await Http.PutAsJsonAsync("/api/Patient/" + id, emp);
+        NavigationManager.NavigateTo("patientList");
+    }
+    private void Cancel()
+    {
+        NavigationManager.NavigateTo("patientList");
+    }
+}
