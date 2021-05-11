@@ -82,6 +82,20 @@ using Healthware.Client.Shared;
 #line default
 #line hidden
 #nullable disable
+#nullable restore
+#line 11 "E:\BlazorAppPatient\Healthware\Client\_Imports.razor"
+using Microsoft.AspNetCore.Components.Authorization;
+
+#line default
+#line hidden
+#nullable disable
+#nullable restore
+#line 1 "E:\BlazorAppPatient\Healthware\Client\Shared\NavMenu.razor"
+using Microsoft.AspNetCore.Authorization;
+
+#line default
+#line hidden
+#nullable disable
     public partial class NavMenu : Microsoft.AspNetCore.Components.ComponentBase
     {
         #pragma warning disable 1998
@@ -90,7 +104,7 @@ using Healthware.Client.Shared;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 33 "E:\BlazorAppPatient\Healthware\Client\Shared\NavMenu.razor"
+#line 49 "E:\BlazorAppPatient\Healthware\Client\Shared\NavMenu.razor"
        
     private bool collapseNavMenu = true;
 

@@ -3,11 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30907.101
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Healthware.Server", "Healthware\Server\Healthware.Server.csproj", "{FE07FDB7-2B75-4274-9E83-918B3D5EA322}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Healthware.Server", "Healthware\Server\Healthware.Server.csproj", "{FE07FDB7-2B75-4274-9E83-918B3D5EA322}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Healthware.Client", "Healthware\Client\Healthware.Client.csproj", "{7C8269D3-635C-4291-BA1A-E7C04CFDB6C0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Healthware.Client", "Healthware\Client\Healthware.Client.csproj", "{7C8269D3-635C-4291-BA1A-E7C04CFDB6C0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Healthware.Shared", "Healthware\Shared\Healthware.Shared.csproj", "{68D0178C-A34F-4802-8DFC-56976D2345DA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Healthware.Shared", "Healthware\Shared\Healthware.Shared.csproj", "{68D0178C-A34F-4802-8DFC-56976D2345DA}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

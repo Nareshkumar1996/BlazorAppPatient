@@ -10,3 +10,15 @@ E:\Healthware\Healthware\Shared\obj\Debug\net5.0\Healthware.Shared.dll
 E:\Healthware\Healthware\Shared\obj\Debug\net5.0\ref\Healthware.Shared.dll
 E:\Healthware\Healthware\Shared\obj\Debug\net5.0\Healthware.Shared.pdb
 E:\Healthware\Healthware\Shared\obj\Debug\net5.0\Healthware.Shared.csprojAssemblyReference.cache
+E:\BlazorAppPatient\Healthware\Shared\bin\Debug\net5.0\Healthware.Shared.deps.json
+E:\BlazorAppPatient\Healthware\Shared\bin\Debug\net5.0\Healthware.Shared.dll
+E:\BlazorAppPatient\Healthware\Shared\bin\Debug\net5.0\ref\Healthware.Shared.dll
+E:\BlazorAppPatient\Healthware\Shared\bin\Debug\net5.0\Healthware.Shared.pdb
+E:\BlazorAppPatient\Healthware\Shared\obj\Debug\net5.0\Healthware.Shared.csprojAssemblyReference.cache
+E:\BlazorAppPatient\Healthware\Shared\obj\Debug\net5.0\Healthware.Shared.GeneratedMSBuildEditorConfig.editorconfig
+E:\BlazorAppPatient\Healthware\Shared\obj\Debug\net5.0\Healthware.Shared.AssemblyInfoInputs.cache
+E:\BlazorAppPatient\Healthware\Shared\obj\Debug\net5.0\Healthware.Shared.AssemblyInfo.cs
+E:\BlazorAppPatient\Healthware\Shared\obj\Debug\net5.0\Healthware.Shared.csproj.CoreCompileInputs.cache
+E:\BlazorAppPatient\Healthware\Shared\obj\Debug\net5.0\Healthware.Shared.dll
+E:\BlazorAppPatient\Healthware\Shared\obj\Debug\net5.0\ref\Healthware.Shared.dll
+E:\BlazorAppPatient\Healthware\Shared\obj\Debug\net5.0\Healthware.Shared.pdb

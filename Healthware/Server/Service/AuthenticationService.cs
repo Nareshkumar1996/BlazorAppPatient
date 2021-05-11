@@ -7,7 +7,6 @@ using System.Security.Claims;
 using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
-using Healthware.Server.Dto;
 using Healthware.Server.Repositories;
 using Healthware.Shared;
 using Microsoft.AspNetCore.Mvc;

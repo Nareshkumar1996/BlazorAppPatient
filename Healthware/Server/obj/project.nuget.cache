@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "J5cjvdXaEHpOBop6uWlllHIeRy12jNG3hny9cADUryVEK99iNW4lC6xVJOYHmOeFNpr4tBf5s4Xgy8J08s7a+Q==",
+  "dgSpecHash": "Hwm2lSSxmtqKi9wxGS9EtdstPZ6cI1NJHyqkAvGeq5ROm9eMi5K83Y2r4P7sEC5z4/FslTGqaJU+Mwc8BbyTCw==",
   "success": true,
   "projectFilePath": "E:\\BlazorAppPatient\\Healthware\\Server\\Healthware.Server.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\naresh.k.ZUCISYSTEMS\\.nuget\\packages\\blazored.localstorage\\3.0.0\\blazored.localstorage.3.0.0.nupkg.sha512",
     "C:\\Users\\naresh.k.ZUCISYSTEMS\\.nuget\\packages\\dapper\\2.0.78\\dapper.2.0.78.nupkg.sha512",
     "C:\\Users\\naresh.k.ZUCISYSTEMS\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\microsoft.aspnetcore.authentication\\2.2.0\\microsoft.aspnetcore.authentication.2.2.0.nupkg.sha512",
@@ -14,6 +15,7 @@
     "C:\\Users\\naresh.k.ZUCISYSTEMS\\.nuget\\packages\\microsoft.aspnetcore.authorization\\5.0.5\\microsoft.aspnetcore.authorization.5.0.5.nupkg.sha512",
     "C:\\Users\\naresh.k.ZUCISYSTEMS\\.nuget\\packages\\microsoft.aspnetcore.components\\5.0.5\\microsoft.aspnetcore.components.5.0.5.nupkg.sha512",
     "C:\\Users\\naresh.k.ZUCISYSTEMS\\.nuget\\packages\\microsoft.aspnetcore.components.analyzers\\5.0.5\\microsoft.aspnetcore.components.analyzers.5.0.5.nupkg.sha512",
+    "C:\\Users\\naresh.k.ZUCISYSTEMS\\.nuget\\packages\\microsoft.aspnetcore.components.authorization\\5.0.5\\microsoft.aspnetcore.components.authorization.5.0.5.nupkg.sha512",
     "C:\\Users\\naresh.k.ZUCISYSTEMS\\.nuget\\packages\\microsoft.aspnetcore.components.forms\\5.0.5\\microsoft.aspnetcore.components.forms.5.0.5.nupkg.sha512",
     "C:\\Users\\naresh.k.ZUCISYSTEMS\\.nuget\\packages\\microsoft.aspnetcore.components.web\\5.0.5\\microsoft.aspnetcore.components.web.5.0.5.nupkg.sha512",
     "C:\\Users\\naresh.k.ZUCISYSTEMS\\.nuget\\packages\\microsoft.aspnetcore.components.webassembly\\5.0.5\\microsoft.aspnetcore.components.webassembly.5.0.5.nupkg.sha512",
@@ -73,6 +75,7 @@
     "C:\\Users\\naresh.k.ZUCISYSTEMS\\.nuget\\packages\\microsoft.jsinterop.webassembly\\5.0.5\\microsoft.jsinterop.webassembly.5.0.5.nupkg.sha512",
     "C:\\Users\\naresh.k.ZUCISYSTEMS\\.nuget\\packages\\microsoft.net.http.headers\\2.2.0\\microsoft.net.http.headers.2.2.0.nupkg.sha512",
     "C:\\Users\\naresh.k.ZUCISYSTEMS\\.nuget\\packages\\microsoft.netcore.platforms\\3.1.0\\microsoft.netcore.platforms.3.1.0.nupkg.sha512",
+    "C:\\Users\\naresh.k.ZUCISYSTEMS\\.nuget\\packages\\microsoft.visualstudio.azure.containers.tools.targets\\1.10.9\\microsoft.visualstudio.azure.containers.tools.targets.1.10.9.nupkg.sha512",
     "C:\\Users\\naresh.k.ZUCISYSTEMS\\.nuget\\packages\\microsoft.win32.registry\\4.7.0\\microsoft.win32.registry.4.7.0.nupkg.sha512",
     "C:\\Users\\naresh.k.ZUCISYSTEMS\\.nuget\\packages\\microsoft.win32.systemevents\\4.7.0\\microsoft.win32.systemevents.4.7.0.nupkg.sha512",
     "C:\\Users\\naresh.k.ZUCISYSTEMS\\.nuget\\packages\\system.buffers\\4.5.0\\system.buffers.4.5.0.nupkg.sha512",

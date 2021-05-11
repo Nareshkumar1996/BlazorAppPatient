@@ -1,4 +1,5 @@
-﻿<div class="top-row pl-4 navbar navbar-dark">
+﻿@using Microsoft.AspNetCore.Authorization
+<div class="top-row pl-4 navbar navbar-dark">
     <a class="navbar-brand" href="">Healthware</a>
     <button class="navbar-toggler" @onclick="ToggleNavMenu">
         <span class="navbar-toggler-icon"></span>
@@ -26,6 +27,21 @@
             <NavLink class="nav-link" href="patientList">
                 <span class="oi oi-list-rich" aria-hidden="true"></span> Patient Info
             </NavLink>
+        </li>
+        <li class="dropdown-divider"></li>
+        <li class="nav-item px-3">
+            <AuthorizeView>
+                <NotAuthorized>
+                    <NavLink class="nav-link" href="login">
+                        <span class="oi oi-account-login" aria-hidden="true"></span> Login
+                    </NavLink>
+                </NotAuthorized>
+                <Authorized>
+                    <NavLink class="nav-link" href="login">
+                        <span class="oi oi-account-login" aria-hidden="true"></span> Logout
+                    </NavLink>
+                </Authorized>
+            </AuthorizeView>
         </li>
     </ul>
 </div>

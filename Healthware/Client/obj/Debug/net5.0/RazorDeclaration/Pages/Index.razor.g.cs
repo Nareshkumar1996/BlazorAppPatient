@@ -82,6 +82,13 @@ using Healthware.Client.Shared;
 #line default
 #line hidden
 #nullable disable
+#nullable restore
+#line 11 "E:\BlazorAppPatient\Healthware\Client\_Imports.razor"
+using Microsoft.AspNetCore.Components.Authorization;
+
+#line default
+#line hidden
+#nullable disable
     [Microsoft.AspNetCore.Components.RouteAttribute("/")]
     public partial class Index : Microsoft.AspNetCore.Components.ComponentBase
     {

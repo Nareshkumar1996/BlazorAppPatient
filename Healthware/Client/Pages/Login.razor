@@ -1,0 +1,44 @@
+﻿@page "/login"
+@using Healthware.Shared
+@using Blazored.LocalStorage
+@using Microsoft.AspNetCore.Components.Authorization
+
+@inject ILocalStorageService LocalStorage 
+@inject NavigationManager NavigationManager
+@inject HttpClient Http
+@inject AuthenticationStateProvider AuthenticationStateProvider
+
+
+<h3>Login</h3>
+
+<EditForm Model="user" OnSubmit="HandleLogin">
+    <div class="form-group">
+        <label for="emailAddress">Email Address</label>
+        <InputText id="emailAddress" @bind-Value="@user.EmailAddress" class="form-control"></InputText>
+    </div>
+    <div class="form-group">
+        <label for="password">Password</label>
+        <InputText id="password" @bind-Value="@user.Password" class="form-control"></InputText>
+    </div>
+    <button type="submit" class="btn-btn-primary">Login</button>
+</EditForm>
+
+@code {
+    private User user = new User();
+
+    protected async Task HandleLogin()
+    {
+        AuthenticateDto authenticate = new AuthenticateDto();
+        authenticate.UserName = user.EmailAddress;
+        authenticate.Password = user.Password;
+        Console.WriteLine("Log me in!");
+    
+        var param = "emailAddress=" + user.EmailAddress + "&password=" + user.Password;
+        var token = await Http.PostAsJsonAsync<AuthenticateDto>("api/Login", authenticate);
+        var realtoken = await token.Content.ReadAsStringAsync();
+        await LocalStorage.SetItemAsync<string>("JWT Token", realtoken);
+        await AuthenticationStateProvider.GetAuthenticationStateAsync();
+        NavigationManager.NavigateTo("");
+    }
+
+}

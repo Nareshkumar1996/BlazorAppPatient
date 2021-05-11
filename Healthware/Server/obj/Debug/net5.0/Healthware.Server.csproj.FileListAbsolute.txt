@@ -91,6 +91,7 @@ E:\Healthware\Healthware\Server\bin\Debug\net5.0\Microsoft.AspNetCore.Identity.E
 E:\Healthware\Healthware\Server\bin\Debug\net5.0\Microsoft.Extensions.Identity.Core.dll
 E:\Healthware\Healthware\Server\bin\Debug\net5.0\Microsoft.Extensions.Identity.Stores.dll
 E:\Healthware\Healthware\Server\bin\Debug\net5.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+E:\BlazorAppPatient\Healthware\Server\bin\Debug\net5.0\Healthware.Client.StaticWebAssets.xml
 E:\BlazorAppPatient\Healthware\Server\bin\Debug\net5.0\appsettings.Development.json
 E:\BlazorAppPatient\Healthware\Server\bin\Debug\net5.0\appsettings.json
 E:\BlazorAppPatient\Healthware\Server\bin\Debug\net5.0\BlazorDebugProxy\BrowserDebugHost.dll
@@ -102,7 +103,6 @@ E:\BlazorAppPatient\Healthware\Server\bin\Debug\net5.0\BlazorDebugProxy\Mono.Cec
 E:\BlazorAppPatient\Healthware\Server\bin\Debug\net5.0\BlazorDebugProxy\Mono.Cecil.Pdb.dll
 E:\BlazorAppPatient\Healthware\Server\bin\Debug\net5.0\BlazorDebugProxy\Mono.Cecil.Rocks.dll
 E:\BlazorAppPatient\Healthware\Server\bin\Debug\net5.0\BlazorDebugProxy\Newtonsoft.Json.dll
-E:\BlazorAppPatient\Healthware\Server\bin\Debug\net5.0\Healthware.Client.StaticWebAssets.xml
 E:\BlazorAppPatient\Healthware\Server\bin\Debug\net5.0\Healthware.Server.StaticWebAssets.xml
 E:\BlazorAppPatient\Healthware\Server\bin\Debug\net5.0\Healthware.Server.exe
 E:\BlazorAppPatient\Healthware\Server\bin\Debug\net5.0\Healthware.Server.deps.json
@@ -113,11 +113,13 @@ E:\BlazorAppPatient\Healthware\Server\bin\Debug\net5.0\ref\Healthware.Server.dll
 E:\BlazorAppPatient\Healthware\Server\bin\Debug\net5.0\Healthware.Server.pdb
 E:\BlazorAppPatient\Healthware\Server\bin\Debug\net5.0\Healthware.Server.Views.dll
 E:\BlazorAppPatient\Healthware\Server\bin\Debug\net5.0\Healthware.Server.Views.pdb
+E:\BlazorAppPatient\Healthware\Server\bin\Debug\net5.0\Blazored.LocalStorage.dll
 E:\BlazorAppPatient\Healthware\Server\bin\Debug\net5.0\Dapper.dll
 E:\BlazorAppPatient\Healthware\Server\bin\Debug\net5.0\Humanizer.dll
 E:\BlazorAppPatient\Healthware\Server\bin\Debug\net5.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
 E:\BlazorAppPatient\Healthware\Server\bin\Debug\net5.0\Microsoft.AspNetCore.Authorization.dll
 E:\BlazorAppPatient\Healthware\Server\bin\Debug\net5.0\Microsoft.AspNetCore.Components.dll
+E:\BlazorAppPatient\Healthware\Server\bin\Debug\net5.0\Microsoft.AspNetCore.Components.Authorization.dll
 E:\BlazorAppPatient\Healthware\Server\bin\Debug\net5.0\Microsoft.AspNetCore.Components.Forms.dll
 E:\BlazorAppPatient\Healthware\Server\bin\Debug\net5.0\Microsoft.AspNetCore.Components.Web.dll
 E:\BlazorAppPatient\Healthware\Server\bin\Debug\net5.0\Microsoft.AspNetCore.Components.WebAssembly.dll

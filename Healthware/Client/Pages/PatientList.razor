@@ -51,6 +51,6 @@ else
 
     protected async Task LoadData()
     {
-        patientList = await Http.GetJsonAsync<Patient[]>("/api/Patient", new AuthenticationHeaderValue("Bearer", "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJuYXJlc2gua0B6dWNpc3lzdGVtcy5jb20iLCJlbWFpbCI6Im5hcmVzaC5rQHp1Y2lzeXN0ZW1zLmNvbSIsImp0aSI6ImI5N2Y1NTExLTg2MGYtNDMxNS1iYjdlLWI2MzhlZjU4MTdiNyIsImV4cCI6MTYxOTU5NzEzMSwiaXNzIjoibG9jYWxob3N0IiwiYXVkIjoibG9jYWxob3N0In0.8hRqDJvNvN78k1NTN0p-lk72dYvX42vRBr0vI5nUy14"));
+        patientList = await Http.GetJsonAsync<Patient[]>("/api/Patient", new AuthenticationHeaderValue("Bearer", "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJuYXJlc2gua0B6dWNpc3lzdGVtcy5jb20iLCJlbWFpbCI6Im5hcmVzaC5rQHp1Y2lzeXN0ZW1zLmNvbSIsImp0aSI6IjAyNTE3ZDY2LTkxZmYtNDJlZS04NTcyLTA5YWRkOWEzYzg3NyIsImV4cCI6MTYyMDExMTU5NSwiaXNzIjoibG9jYWxob3N0IiwiYXVkIjoibG9jYWxob3N0In0.RnUrbu8j-UFojNo3ySAM8_VCx9x5fVW62Is_hXTAs80"));
     }
 }

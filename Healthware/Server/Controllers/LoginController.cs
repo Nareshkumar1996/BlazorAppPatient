@@ -5,8 +5,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Security.Claims;
 using System.Threading.Tasks;
-using Healthware.Server.Dto;
 using Healthware.Server.Service;
+using Healthware.Shared;
 using Microsoft.AspNetCore.Authorization;
 
 namespace Healthware.Server.Controllers

@@ -83,6 +83,13 @@ using Healthware.Client.Shared;
 #line hidden
 #nullable disable
 #nullable restore
+#line 11 "E:\BlazorAppPatient\Healthware\Client\_Imports.razor"
+using Microsoft.AspNetCore.Components.Authorization;
+
+#line default
+#line hidden
+#nullable disable
+#nullable restore
 #line 2 "E:\BlazorAppPatient\Healthware\Client\Pages\DeletePatient.razor"
 using Healthware.Shared;
 

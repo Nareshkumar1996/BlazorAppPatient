@@ -650,8 +650,10 @@ E:\BlazorAppPatient\Healthware\Client\bin\Debug\net5.0\Healthware.Client.pdb
 E:\BlazorAppPatient\Healthware\Client\bin\Debug\net5.0\wwwroot\_framework\Healthware.Client.dll
 E:\BlazorAppPatient\Healthware\Client\bin\Debug\net5.0\wwwroot\_framework\Healthware.Client.pdb
 E:\BlazorAppPatient\Healthware\Client\bin\Debug\net5.0\wwwroot\_framework\blazor.webassembly.js
+E:\BlazorAppPatient\Healthware\Client\bin\Debug\net5.0\wwwroot\_framework\Blazored.LocalStorage.dll.gz
 E:\BlazorAppPatient\Healthware\Client\bin\Debug\net5.0\wwwroot\_framework\Microsoft.AspNetCore.Authorization.dll.gz
 E:\BlazorAppPatient\Healthware\Client\bin\Debug\net5.0\wwwroot\_framework\Microsoft.AspNetCore.Components.dll.gz
+E:\BlazorAppPatient\Healthware\Client\bin\Debug\net5.0\wwwroot\_framework\Microsoft.AspNetCore.Components.Authorization.dll.gz
 E:\BlazorAppPatient\Healthware\Client\bin\Debug\net5.0\wwwroot\_framework\Microsoft.AspNetCore.Components.Forms.dll.gz
 E:\BlazorAppPatient\Healthware\Client\bin\Debug\net5.0\wwwroot\_framework\Microsoft.AspNetCore.Components.Web.dll.gz
 E:\BlazorAppPatient\Healthware\Client\bin\Debug\net5.0\wwwroot\_framework\Microsoft.AspNetCore.Components.WebAssembly.dll.gz
@@ -846,8 +848,10 @@ E:\BlazorAppPatient\Healthware\Client\bin\Debug\net5.0\wwwroot\_framework\icudt_
 E:\BlazorAppPatient\Healthware\Client\bin\Debug\net5.0\wwwroot\_framework\icudt_no_CJK.dat.gz
 E:\BlazorAppPatient\Healthware\Client\bin\Debug\net5.0\wwwroot\_framework\dotnet.5.0.5.js.gz
 E:\BlazorAppPatient\Healthware\Client\bin\Debug\net5.0\wwwroot\_framework\Healthware.Shared.dll.gz
+E:\BlazorAppPatient\Healthware\Client\bin\Debug\net5.0\wwwroot\_framework\Blazored.LocalStorage.dll
 E:\BlazorAppPatient\Healthware\Client\bin\Debug\net5.0\wwwroot\_framework\Microsoft.AspNetCore.Authorization.dll
 E:\BlazorAppPatient\Healthware\Client\bin\Debug\net5.0\wwwroot\_framework\Microsoft.AspNetCore.Components.dll
+E:\BlazorAppPatient\Healthware\Client\bin\Debug\net5.0\wwwroot\_framework\Microsoft.AspNetCore.Components.Authorization.dll
 E:\BlazorAppPatient\Healthware\Client\bin\Debug\net5.0\wwwroot\_framework\Microsoft.AspNetCore.Components.Forms.dll
 E:\BlazorAppPatient\Healthware\Client\bin\Debug\net5.0\wwwroot\_framework\Microsoft.AspNetCore.Components.Web.dll
 E:\BlazorAppPatient\Healthware\Client\bin\Debug\net5.0\wwwroot\_framework\Microsoft.AspNetCore.Components.WebAssembly.dll
@@ -1057,6 +1061,7 @@ E:\BlazorAppPatient\Healthware\Client\obj\Debug\net5.0\RazorDeclaration\Pages\De
 E:\BlazorAppPatient\Healthware\Client\obj\Debug\net5.0\RazorDeclaration\Pages\EditPatient.razor.g.cs
 E:\BlazorAppPatient\Healthware\Client\obj\Debug\net5.0\RazorDeclaration\Pages\FetchData.razor.g.cs
 E:\BlazorAppPatient\Healthware\Client\obj\Debug\net5.0\RazorDeclaration\Pages\Index.razor.g.cs
+E:\BlazorAppPatient\Healthware\Client\obj\Debug\net5.0\RazorDeclaration\Pages\Login.razor.g.cs
 E:\BlazorAppPatient\Healthware\Client\obj\Debug\net5.0\RazorDeclaration\Pages\PatientList.razor.g.cs
 E:\BlazorAppPatient\Healthware\Client\obj\Debug\net5.0\RazorDeclaration\Shared\SurveyPrompt.razor.g.cs
 E:\BlazorAppPatient\Healthware\Client\obj\Debug\net5.0\RazorDeclaration\_Imports.razor.g.cs
@@ -1074,13 +1079,16 @@ E:\BlazorAppPatient\Healthware\Client\obj\Debug\net5.0\Razor\Pages\DeletePatient
 E:\BlazorAppPatient\Healthware\Client\obj\Debug\net5.0\Razor\Pages\EditPatient.razor.g.cs
 E:\BlazorAppPatient\Healthware\Client\obj\Debug\net5.0\Razor\Pages\FetchData.razor.g.cs
 E:\BlazorAppPatient\Healthware\Client\obj\Debug\net5.0\Razor\Pages\Index.razor.g.cs
+E:\BlazorAppPatient\Healthware\Client\obj\Debug\net5.0\Razor\Pages\Login.razor.g.cs
 E:\BlazorAppPatient\Healthware\Client\obj\Debug\net5.0\Razor\Pages\PatientList.razor.g.cs
 E:\BlazorAppPatient\Healthware\Client\obj\Debug\net5.0\Razor\Shared\SurveyPrompt.razor.g.cs
 E:\BlazorAppPatient\Healthware\Client\obj\Debug\net5.0\Razor\_Imports.razor.g.cs
 E:\BlazorAppPatient\Healthware\Client\obj\Debug\net5.0\Razor\Shared\MainLayout.razor.g.cs
 E:\BlazorAppPatient\Healthware\Client\obj\Debug\net5.0\Razor\Shared\NavMenu.razor.g.cs
+E:\BlazorAppPatient\Healthware\Client\obj\Debug\net5.0\build-gz\Gbv5yl+q.gz
 E:\BlazorAppPatient\Healthware\Client\obj\Debug\net5.0\build-gz\rbAKAyb0.gz
 E:\BlazorAppPatient\Healthware\Client\obj\Debug\net5.0\build-gz\w+Rlp+tU.gz
+E:\BlazorAppPatient\Healthware\Client\obj\Debug\net5.0\build-gz\GQomwarw.gz
 E:\BlazorAppPatient\Healthware\Client\obj\Debug\net5.0\build-gz\KyE0+2FN.gz
 E:\BlazorAppPatient\Healthware\Client\obj\Debug\net5.0\build-gz\OMVj2kc5.gz
 E:\BlazorAppPatient\Healthware\Client\obj\Debug\net5.0\build-gz\xHgw2WEq.gz
