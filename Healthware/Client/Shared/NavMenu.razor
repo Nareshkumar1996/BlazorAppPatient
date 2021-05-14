@@ -1,4 +1,8 @@
-﻿@using Microsoft.AspNetCore.Authorization
+﻿@inject ILocalStorageService LocalStorage
+@inject AuthenticationStateProvider AuthStateProvider
+
+@using Microsoft.AspNetCore.Authorization
+@using Blazored.LocalStorage
 <div class="top-row pl-4 navbar navbar-dark">
     <a class="navbar-brand" href="">Healthware</a>
     <button class="navbar-toggler" @onclick="ToggleNavMenu">
@@ -37,9 +41,9 @@
                     </NavLink>
                 </NotAuthorized>
                 <Authorized>
-                    <NavLink class="nav-link" href="login">
+                    <a class="nav-link" @onclick="Logout">
                         <span class="oi oi-account-login" aria-hidden="true"></span> Logout
-                    </NavLink>
+                    </a>
                 </Authorized>
             </AuthorizeView>
         </li>
@@ -54,5 +58,11 @@
     private void ToggleNavMenu()
     {
         collapseNavMenu = !collapseNavMenu;
+    }
+
+    private async void Logout()
+    {
+        await LocalStorage.RemoveItemAsync( "JWT Token");
+        await AuthStateProvider.GetAuthenticationStateAsync();
     }
 }

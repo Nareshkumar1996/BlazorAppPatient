@@ -90,8 +90,15 @@ using Microsoft.AspNetCore.Components.Authorization;
 #line hidden
 #nullable disable
 #nullable restore
-#line 1 "E:\BlazorAppPatient\Healthware\Client\Shared\NavMenu.razor"
+#line 4 "E:\BlazorAppPatient\Healthware\Client\Shared\NavMenu.razor"
 using Microsoft.AspNetCore.Authorization;
+
+#line default
+#line hidden
+#nullable disable
+#nullable restore
+#line 5 "E:\BlazorAppPatient\Healthware\Client\Shared\NavMenu.razor"
+using Blazored.LocalStorage;
 
 #line default
 #line hidden
@@ -104,7 +111,7 @@ using Microsoft.AspNetCore.Authorization;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 49 "E:\BlazorAppPatient\Healthware\Client\Shared\NavMenu.razor"
+#line 53 "E:\BlazorAppPatient\Healthware\Client\Shared\NavMenu.razor"
        
     private bool collapseNavMenu = true;
 
@@ -115,9 +122,17 @@ using Microsoft.AspNetCore.Authorization;
         collapseNavMenu = !collapseNavMenu;
     }
 
+    private async void Logout()
+    {
+        await LocalStorage.RemoveItemAsync( "JWT Token");
+        await AuthStateProvider.GetAuthenticationStateAsync();
+    }
+
 #line default
 #line hidden
 #nullable disable
+        [global::Microsoft.AspNetCore.Components.InjectAttribute] private AuthenticationStateProvider AuthStateProvider { get; set; }
+        [global::Microsoft.AspNetCore.Components.InjectAttribute] private ILocalStorageService LocalStorage { get; set; }
     }
 }
 #pragma warning restore 1591

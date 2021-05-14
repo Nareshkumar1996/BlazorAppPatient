@@ -1,10 +1,12 @@
 ﻿@page "/patientList"
 @using Healthware.Shared
 @using System.Net.Http.Headers
+@using Blazored.LocalStorage
 @using Healthware.Client.Extensions
 
 @inject NavigationManager NavigationManager
 @inject HttpClient Http
+@inject ILocalStorageService LocalStorageService
 
 <h2>Patient Details</h2>
 <p>
@@ -51,6 +53,7 @@ else
 
     protected async Task LoadData()
     {
-        patientList = await Http.GetJsonAsync<Patient[]>("/api/Patient", new AuthenticationHeaderValue("Bearer", "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJuYXJlc2gua0B6dWNpc3lzdGVtcy5jb20iLCJlbWFpbCI6Im5hcmVzaC5rQHp1Y2lzeXN0ZW1zLmNvbSIsImp0aSI6IjAyNTE3ZDY2LTkxZmYtNDJlZS04NTcyLTA5YWRkOWEzYzg3NyIsImV4cCI6MTYyMDExMTU5NSwiaXNzIjoibG9jYWxob3N0IiwiYXVkIjoibG9jYWxob3N0In0.RnUrbu8j-UFojNo3ySAM8_VCx9x5fVW62Is_hXTAs80"));
+        var jwtToken = await LocalStorageService.GetItemAsStringAsync("JWT Token");
+        patientList = await Http.GetJsonAsync<Patient[]>("/api/Patient", new AuthenticationHeaderValue("Bearer", jwtToken));
     }
 }

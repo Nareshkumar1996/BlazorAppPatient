@@ -105,6 +105,13 @@ using System.Net.Http.Headers;
 #nullable disable
 #nullable restore
 #line 4 "E:\BlazorAppPatient\Healthware\Client\Pages\PatientList.razor"
+using Blazored.LocalStorage;
+
+#line default
+#line hidden
+#nullable disable
+#nullable restore
+#line 5 "E:\BlazorAppPatient\Healthware\Client\Pages\PatientList.razor"
 using Healthware.Client.Extensions;
 
 #line default
@@ -119,7 +126,7 @@ using Healthware.Client.Extensions;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 45 "E:\BlazorAppPatient\Healthware\Client\Pages\PatientList.razor"
+#line 47 "E:\BlazorAppPatient\Healthware\Client\Pages\PatientList.razor"
  
     Patient[] patientList;
     protected override async Task OnInitializedAsync()
@@ -129,12 +136,14 @@ using Healthware.Client.Extensions;
 
     protected async Task LoadData()
     {
-        patientList = await Http.GetJsonAsync<Patient[]>("/api/Patient", new AuthenticationHeaderValue("Bearer", "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJuYXJlc2gua0B6dWNpc3lzdGVtcy5jb20iLCJlbWFpbCI6Im5hcmVzaC5rQHp1Y2lzeXN0ZW1zLmNvbSIsImp0aSI6IjAyNTE3ZDY2LTkxZmYtNDJlZS04NTcyLTA5YWRkOWEzYzg3NyIsImV4cCI6MTYyMDExMTU5NSwiaXNzIjoibG9jYWxob3N0IiwiYXVkIjoibG9jYWxob3N0In0.RnUrbu8j-UFojNo3ySAM8_VCx9x5fVW62Is_hXTAs80"));
+        var jwtToken = await LocalStorageService.GetItemAsStringAsync("JWT Token");
+        patientList = await Http.GetJsonAsync<Patient[]>("/api/Patient", new AuthenticationHeaderValue("Bearer", jwtToken));
     }
 
 #line default
 #line hidden
 #nullable disable
+        [global::Microsoft.AspNetCore.Components.InjectAttribute] private ILocalStorageService LocalStorageService { get; set; }
         [global::Microsoft.AspNetCore.Components.InjectAttribute] private HttpClient Http { get; set; }
         [global::Microsoft.AspNetCore.Components.InjectAttribute] private NavigationManager NavigationManager { get; set; }
     }

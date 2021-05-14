@@ -1,11 +1,15 @@
 ﻿@page "/addPatient"
 @using Healthware.Shared
+@using Blazored.LocalStorage
+@using System.Net.Http.Headers
+@using Healthware.Client.Extensions
 
 @inject NavigationManager NavigationManager
 @inject HttpClient Http
+@inject ILocalStorageService LocalStorageService
 
 <h2>Create Patient</h2>
-<hr/>
+<hr />
 <form>
     <div class="row">
         <div class="col-md-8">
@@ -26,8 +30,8 @@
     <div class="row">
         <div class="col-md-4">
             <div class="form-group">
-                <input type="button" class="btn btn-primary" @onclick="@CreatePatient" value="Save"/>
-                <input type="button" class="btn" @onclick="@Cancel" value="Cancel"/>
+                <input type="button" class="btn btn-primary" @onclick="@CreatePatient" value="Save" />
+                <input type="button" class="btn" @onclick="@Cancel" value="Cancel" />
             </div>
         </div>
     </div>
@@ -39,7 +43,9 @@
 
     protected async Task CreatePatient()
     {
-        await Http.PostAsJsonAsync("/api/Patient", patient);
+        var jwtToken = await LocalStorageService.GetItemAsStringAsync("JWT Token");
+       
+        await Http.PostAsync( "/api/Patient", patient, new AuthenticationHeaderValue("Bearer", jwtToken));
         NavigationManager.NavigateTo("patientList");
     }
 

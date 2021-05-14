@@ -96,6 +96,27 @@ using Healthware.Shared;
 #line default
 #line hidden
 #nullable disable
+#nullable restore
+#line 3 "E:\BlazorAppPatient\Healthware\Client\Pages\AddPatient.razor"
+using Blazored.LocalStorage;
+
+#line default
+#line hidden
+#nullable disable
+#nullable restore
+#line 4 "E:\BlazorAppPatient\Healthware\Client\Pages\AddPatient.razor"
+using System.Net.Http.Headers;
+
+#line default
+#line hidden
+#nullable disable
+#nullable restore
+#line 5 "E:\BlazorAppPatient\Healthware\Client\Pages\AddPatient.razor"
+using Healthware.Client.Extensions;
+
+#line default
+#line hidden
+#nullable disable
     [Microsoft.AspNetCore.Components.RouteAttribute("/addPatient")]
     public partial class AddPatient : Microsoft.AspNetCore.Components.ComponentBase
     {
@@ -105,13 +126,15 @@ using Healthware.Shared;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 37 "E:\BlazorAppPatient\Healthware\Client\Pages\AddPatient.razor"
+#line 41 "E:\BlazorAppPatient\Healthware\Client\Pages\AddPatient.razor"
  
     Patient patient = new Patient();
 
     protected async Task CreatePatient()
     {
-        await Http.PostAsJsonAsync("/api/Patient", patient);
+        var jwtToken = await LocalStorageService.GetItemAsStringAsync("JWT Token");
+       
+        await Http.PostAsync( "/api/Patient", patient, new AuthenticationHeaderValue("Bearer", jwtToken));
         NavigationManager.NavigateTo("patientList");
     }
 
@@ -123,6 +146,7 @@ using Healthware.Shared;
 #line default
 #line hidden
 #nullable disable
+        [global::Microsoft.AspNetCore.Components.InjectAttribute] private ILocalStorageService LocalStorageService { get; set; }
         [global::Microsoft.AspNetCore.Components.InjectAttribute] private HttpClient Http { get; set; }
         [global::Microsoft.AspNetCore.Components.InjectAttribute] private NavigationManager NavigationManager { get; set; }
     }
