@@ -17,7 +17,7 @@ namespace Healthware.Server.Data
         public PatientServiceDapper()
         {
             connectionString =
-                @"Server=ZS-DSK-0003\SQLEXPRESS; Database=WeatherForecast; User Id=sa; Password=Password@1; Integrated Security=False;";
+                @"Server=ZS-DSK-0003\SQLEXPRESS; Database=HealthwareASSIST; User Id=sa; Password=Password@1; Integrated Security=False;";
         }
 
         public IDbConnection Connection {

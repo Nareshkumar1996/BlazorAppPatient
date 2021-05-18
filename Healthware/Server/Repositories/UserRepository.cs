@@ -27,7 +27,7 @@ namespace Healthware.Server.Repositories
         }
         public IDbConnection Connection {
             get {
-                return new SqlConnection(_configuration.GetConnectionString("DefaultConnection"));
+                return new SqlConnection(@"Server=ZS-DSK-0003\SQLEXPRESS; Database=HealthwareASSIST; User Id=sa; Password=Password@1; Integrated Security=False;MultipleActiveResultSets=True");
             }
         }
 
@@ -80,12 +80,12 @@ namespace Healthware.Server.Repositories
 
         public Task<string> GetUserIdAsync(User user, CancellationToken cancellationToken)
         {
-            throw new NotImplementedException();
+            return Task.FromResult(user.Id.ToString());
         }
 
         public Task<string> GetUserNameAsync(User user, CancellationToken cancellationToken)
         {
-            throw new NotImplementedException();
+            return Task.FromResult(user.EmailAddress);
         }
 
         public Task SetUserNameAsync(User user, string userName, CancellationToken cancellationToken)

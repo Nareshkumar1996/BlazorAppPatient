@@ -7,6 +7,7 @@
 @inject NavigationManager NavigationManager
 @inject HttpClient Http
 @inject ILocalStorageService LocalStorageService
+@inject AuthenticationStateProvider AuthenticationStateProvider
 
 <h2>Patient Details</h2>
 <p>
@@ -53,7 +54,20 @@ else
 
     protected async Task LoadData()
     {
-        var jwtToken = await LocalStorageService.GetItemAsStringAsync("JWT Token");
-        patientList = await Http.GetJsonAsync<Patient[]>("/api/Patient", new AuthenticationHeaderValue("Bearer", jwtToken));
+        var authState = await AuthenticationStateProvider.GetAuthenticationStateAsync();
+        var user = authState.User;
+        
+
+        if (true)
+        {
+            var jwtToken = await LocalStorageService.GetItemAsStringAsync("JWT Token");
+            patientList = await Http.GetJsonAsync<Patient[]>("/api/Patient", new AuthenticationHeaderValue("Bearer", jwtToken));
+        }
+        else
+        {
+            NavigationManager.NavigateTo("Login");
+        }
+
+
     }
 }

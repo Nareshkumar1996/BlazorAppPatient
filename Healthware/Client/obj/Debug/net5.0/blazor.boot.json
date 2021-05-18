@@ -200,12 +200,12 @@
       "mscorlib.dll": "sha256-jU85t8bOVm2PPQRkPJ1kS0nCJIyBjjlet2IR1d9m+RI=",
       "netstandard.dll": "sha256-B6gmXEMfYgOuaOR1g1cGHLn2kDlZYAah4K2XNUZbTs4=",
       "System.Private.CoreLib.dll": "sha256-XY0bl1U8F\/iSbQzkmIHM8UtE\/R9VntZoy\/kMbvuMjTA=",
-      "Healthware.Shared.dll": "sha256-zwtEyb3IAl\/kvVTtDSnQhTehfEoiZPb5QDOr24MDBsw=",
-      "Healthware.Client.dll": "sha256-NL\/pWpNj5oh1qxHMutzz9ASfE8932cV5TP0dsv1L9IQ="
+      "Healthware.Shared.dll": "sha256-IxyBKKtuzi7U8Y2cDFu\/ARwPjeh94bA0zTI+9cByP4s=",
+      "Healthware.Client.dll": "sha256-4mQC2TsU5ir3zPSDR7CN\/IQWrdyyXPtUbquPZbHB8eM="
     },
     "lazyAssembly": null,
     "pdb": {
-      "Healthware.Client.pdb": "sha256-x9DwN8nF\/2IgHX\/stLG+2J4Zrhosf5dGeucMSXOQYf8="
+      "Healthware.Client.pdb": "sha256-zwkkBgEttHC2NugucdsqmKN93JmT6tKED+gQMrfZaIg="
     },
     "runtime": {
       "dotnet.timezones.blat": "sha256-OEDZp6noMH3AdT8qd0zd7ZXzy2CsPQ+CZeQnYmRoVWo=",

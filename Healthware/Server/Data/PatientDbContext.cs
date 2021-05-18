@@ -14,5 +14,10 @@ namespace Healthware.Server.Data
         }
         public virtual DbSet<Patient> Patient { get; set; }
         public virtual DbSet<User> Users { get; set; }
+        public virtual DbSet<SessionActivity> SessionActivities { get; set; }
+        public virtual DbSet<ServiceAuditTrail> ServiceAuditTrails { get; set; }
+        public virtual DbSet<JournalEntry> JournalEntries { get; set; }
+        public virtual DbSet<Role> Roles { get; set; }
+        public virtual DbSet<UserHasRoles> UserHasRoles { get; set; }
     }
 }

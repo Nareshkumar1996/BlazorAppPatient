@@ -7,8 +7,10 @@ using System.Security.Claims;
 using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
+using Healthware.Assist.Core.Web.Authentication.JwtBearer;
 using Healthware.Server.Repositories;
 using Healthware.Shared;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.IdentityModel.Tokens;
@@ -23,11 +25,15 @@ namespace Healthware.Server.Service
     {
         private readonly IUserRepository _userRepository;
         private readonly IConfiguration _configuration;
+        private readonly IJwtHelper _jwtHelper;
+        private readonly IUserClaimsPrincipalFactory<User> _claimsPrincipalFactory;
 
-        public AuthenticationService(IUserRepository userRepository,IConfiguration configuration)
+        public AuthenticationService(IUserRepository userRepository,IConfiguration configuration,IJwtHelper jwtHelper, IUserClaimsPrincipalFactory<User> claimsPrincipalFactory)
         {
             _userRepository = userRepository;
             _configuration = configuration;
+            _jwtHelper = jwtHelper;
+            _claimsPrincipalFactory = claimsPrincipalFactory;
         }
         public async Task<ActionResult<LoginResponseDto>> Authenticate(AuthenticateDto authenticateDto)
         {
@@ -36,7 +42,8 @@ namespace Healthware.Server.Service
                 var user = await _userRepository.GetUserByEmailAddress(authenticateDto.UserName);
                 if (authenticateDto.Password.Equals(user.Password))
                 {
-                    var tokenStr = GenerateJSONWebToken(user);
+                    //var tokenStr = GenerateJSONWebToken(user);
+                    var tokenStr = GetAccessToken(user, "Patient").GetAwaiter().GetResult();
                     return new LoginResponseDto() {Token = tokenStr};
                 }
 
@@ -67,6 +74,13 @@ namespace Healthware.Server.Service
             );
             var encodeToken = new JwtSecurityTokenHandler().WriteToken(token);
             return encodeToken;
+        }
+
+        private async Task<string> GetAccessToken(User user, string role)
+        {
+            return _jwtHelper.GetEncryptedAccessToken(_jwtHelper.CreateAccessToken(
+                _jwtHelper.CreateJwtClaims(
+                    (this._claimsPrincipalFactory.CreateAsync(user).GetAwaiter().GetResult()).Identity as ClaimsIdentity, role)));
         }
     }
 }

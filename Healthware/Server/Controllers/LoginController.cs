@@ -13,6 +13,7 @@ namespace Healthware.Server.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
+    [AllowAnonymous]
     public class LoginController : ControllerBase
     {
         private readonly IAuthenticationService _authenticationService;
