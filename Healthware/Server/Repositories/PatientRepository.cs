@@ -24,7 +24,7 @@ namespace Healthware.Server.Repositories
         }
         public IDbConnection Connection {
             get {
-                return new SqlConnection(_configuration.GetConnectionString("DefaultConnection"));
+                return new SqlConnection(@"Server=ZS-DSK-0003\SQLEXPRESS; Database=HealthwareASSIST; User Id=sa; Password=Password@1; Integrated Security=False;MultipleActiveResultSets=True");
             }
         }
         public async Task<IEnumerable<Patient>> GetAll()

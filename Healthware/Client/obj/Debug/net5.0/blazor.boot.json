@@ -201,11 +201,11 @@
       "netstandard.dll": "sha256-B6gmXEMfYgOuaOR1g1cGHLn2kDlZYAah4K2XNUZbTs4=",
       "System.Private.CoreLib.dll": "sha256-XY0bl1U8F\/iSbQzkmIHM8UtE\/R9VntZoy\/kMbvuMjTA=",
       "Healthware.Shared.dll": "sha256-IxyBKKtuzi7U8Y2cDFu\/ARwPjeh94bA0zTI+9cByP4s=",
-      "Healthware.Client.dll": "sha256-4mQC2TsU5ir3zPSDR7CN\/IQWrdyyXPtUbquPZbHB8eM="
+      "Healthware.Client.dll": "sha256-IY+xN+jD6h37fcLZGGecwfaYBeAQmxP+hqkhOfji74k="
     },
     "lazyAssembly": null,
     "pdb": {
-      "Healthware.Client.pdb": "sha256-zwkkBgEttHC2NugucdsqmKN93JmT6tKED+gQMrfZaIg="
+      "Healthware.Client.pdb": "sha256-cayfr6xOtmKE\/bG5RmjVZ\/0aCN6UFIzX+r3Gu3XJoL4="
     },
     "runtime": {
       "dotnet.timezones.blat": "sha256-OEDZp6noMH3AdT8qd0zd7ZXzy2CsPQ+CZeQnYmRoVWo=",

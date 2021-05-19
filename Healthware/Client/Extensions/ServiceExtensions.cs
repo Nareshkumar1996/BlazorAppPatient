@@ -17,7 +17,7 @@ namespace Healthware.Client.Extensions
         public static async Task<T> GetJsonAsync<T>(this HttpClient httpClient, string url, AuthenticationHeaderValue authorization)
         {
             var request = new HttpRequestMessage(HttpMethod.Get, url);
-            request.Headers.Authorization = authorization;
+            request.Headers.Add("token",authorization.Parameter);
 
             var response = await httpClient.SendAsync(request);
             var responseBytes = await response.Content.ReadAsByteArrayAsync();
@@ -27,7 +27,7 @@ namespace Healthware.Client.Extensions
         public static async Task PostAsync(this HttpClient httpClient,string url, object T, AuthenticationHeaderValue authorization)
         {
             var request = new HttpRequestMessage(HttpMethod.Post, url);
-            request.Headers.Authorization = authorization;
+            request.Headers.Add("token", authorization.Parameter);
 
             string json = JsonConvert.SerializeObject(T);
             StringContent data = new StringContent(json, Encoding.UTF8, "application/json");

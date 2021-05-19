@@ -9,6 +9,7 @@ using Microsoft.Extensions.Hosting;
 using System.Linq;
 using System.Text;
 using Castle.MicroKernel.Registration;
+using Healthware.Assist.Core.Constants;
 using Healthware.Assist.Core.Containers;
 using Healthware.Assist.Core.Startup;
 using Healthware.Assist.Core.Web.Authentication.JwtBearer;
@@ -45,7 +46,7 @@ namespace Healthware.Server
             var container = Ioc.WireupApi(Start.TheApplication());
             services.AddDbContext<PatientDbContext>(options =>
                 options.UseSqlServer(
-                    Configuration.GetConnectionString("DefaultConnection")));
+                    _appConfiguration.GetConnectionString(Portal.ConnectionStringName)));
             AuthConfigurer.Configure(services, _appConfiguration);
             services.AddIdentity<User, Role>();
             services.AddScoped<PatientServiceDapper, PatientServiceDapper>();
@@ -62,10 +63,10 @@ namespace Healthware.Server
             services.AddScoped<RoleManager<Role>>();
             container.Register(Component.For<TokenAuthConfiguration>().LifestyleSingleton());
             var tokenAuthConfig = Resolve.AnImplementationOf<TokenAuthConfiguration>();
-            tokenAuthConfig.Issuer = "http://localhost";
+            tokenAuthConfig.Issuer = "http://localhost:44390";
             tokenAuthConfig.SecurityKey = new SymmetricSecurityKey(Encoding.ASCII.GetBytes("PatientPortal_C421AAEE0D114E9C"));
             
-            tokenAuthConfig.Audience = "http://localhost";
+            tokenAuthConfig.Audience = "http://localhost:44390";
             tokenAuthConfig.SigningCredentials = new SigningCredentials(tokenAuthConfig.SecurityKey, SecurityAlgorithms.HmacSha256);
             tokenAuthConfig.Expiration = TimeSpan.FromDays(1);
             services.AddSingleton<TokenAuthConfiguration>(tokenAuthConfig);

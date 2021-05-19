@@ -14,8 +14,8 @@ namespace Healthware.Server.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    [HandleAuthorize]
-    [Authorize]
+    //[HandleAuthorize]
+    [Authorize("JwtBearer")]
     public class PatientController : ControllerBase
     {
         private readonly IPatientRepository _patientRepository;
