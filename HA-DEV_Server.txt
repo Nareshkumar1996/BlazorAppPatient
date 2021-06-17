@@ -1,0 +1,69 @@
+String projectName = "Heathware.ActiveAssist.WebAPI"
+String publishedPath = "CCube.PatientPortal\\CCube.PatientPortal.WebAPI\\bin\\Release\\netcoreapp3.1\\publish"
+String iisApplicationName = "CCube DEV Site\\PatientPortalAPI"
+String iisApplicationPath = "C:\\inetpub\\wwwroot\\CCube DEV Site\\PatientPortalAPI"
+String targetServerIP = "18.216.180"
+
+pipeline{
+    agent { label 'jenkinswin' }
+    
+    environment {
+        dotnet ='C:\\Program Files (x86)\\dotnet\\'
+        }
+        
+    stages{
+ 	stage('Checkout') {
+ 			   steps {
+				     git credentialsId: 'HA-Zucisystems-dev', url: 'https://github.com/zucisystems-dev/HealthWare-ActiveASSIST.git/', branch: 'Dev'
+     				 }
+  			  }
+       stage('Restore packages'){
+   				 steps{
+					  bat """
+				          cd ${projectName}
+				          dotnet restore
+                                          """
+     				     }
+  				}
+	stage('Clean'){
+    			    steps{
+    			        bat """
+				          cd ${projectName}
+				          dotnet clean
+                                          """
+     		        }
+	                }
+	stage('Build'){
+   			steps{
+			      bat """
+			      cd ${projectName}
+			      dotnet build --configuration Release /p:EnvironmentName=Staging /p:Version=${BUILD_NUMBER}
+                              """
+    			}
+ 		     }
+	//stage('Test: Unit Test'){
+   	//			 steps {
+	//				     bat "dotnet test YourProjectPath\\UnitTest_Project.csproj"
+     	//				}
+  	//			}
+       
+	//stage('Test: Integration Test'){
+    	//				steps {
+	//				       bat "dotnet test ProjectPath\\IntegrateTest_Project.csproj"
+      	//				}
+   	//}
+	stage('Publish'){
+     			 steps{
+     			     bat """
+			         cd ${projectName}
+			         dotnet publish -c Release /p:EnvironmentName=Staging --no-build
+                              """
+		        }
+	}
+	stage('Deploy'){
+	    steps{
+        withCredentials([usernamePassword(credentialsId: 'ccube-dev', usernameVariable: 'USERNAME', passwordVariable: 'PASSWORD')]) { bat """ "C:\\Program Files (x86)\\IIS\\Microsoft Web Deploy V3\\msdeploy.exe" -verb:sync -source:iisApp="${WORKSPACE}\\${publishedPath}" -enableRule:AppOffline -dest:iisApp="${iisApplicationName}",ComputerName="https://${targetServerIP}:8172/msdeploy.axd",UserName="$USERNAME",Password="$PASSWORD",AuthType="Basic" -allowUntrusted"""}
+	    }
+    	}
+    }    
+ }
