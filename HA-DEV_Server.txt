@@ -14,7 +14,7 @@ pipeline{
     stages{
  	stage('Checkout') {
  			   steps {
-				     git credentialsId: 'HA-Zucisystems-dev', url: 'https://github.com/zucisystems-dev/HealthWare-ActiveASSIST.git/', branch: 'Dev'
+				     git credentialsId: 'NareshTest', url: 'https://github.com/Nareshkumar1996/BlazorAppPatient.git/', branch: 'main'
      				 }
   			  }
        stage('Restore packages'){
